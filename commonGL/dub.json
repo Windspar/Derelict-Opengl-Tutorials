@@ -1,0 +1,15 @@
+{
+	"name": "common",
+	"authors": [
+		"Kevin Wolff"
+	],
+    "dependencies": {
+        "derelict-sdl2": "~>3.0.0-beta",
+        "derelict-gl3": "~>2.0.0-beta",
+        "gl3n": "~>1.3.1",
+	},
+	"importPaths": ["source"],
+	"description": "Derelict sdl2 and opengl common items",
+	"copyright": "Copyright © 2017, Kevin",
+	"license": "None"
+}
