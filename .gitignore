@@ -3,3 +3,4 @@ dub.selections.json
 Tut1 First Window/window
 Tut2 Red Triangle/triangle
 Tut4 Cube/cube
+commonGL/libcommon.a
