@@ -6,7 +6,7 @@ struct VertexArray
     GLuint vao;
     GLsizei count;
 
-    static void bindZero()
+    static void unbind()
     {
         glBindVertexArray(0);
     }
@@ -65,7 +65,7 @@ struct VertexBuffer
 
     this(GLsizei n)
     {
-        glGenBuffers(n, &this.vbo);
+        glGenBuffers(n, &vbo);
         count = n;
     }
 
