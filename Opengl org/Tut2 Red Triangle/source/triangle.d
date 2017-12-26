@@ -17,7 +17,7 @@ void main()
     VertexBuffer vertexBuffer = VertexBuffer(1).bind(GL_ARRAY_BUFFER);
     vertexBuffer.data(GL_ARRAY_BUFFER, vertexBufferData.glSizeof(), vertexBufferData.ptr, GL_STATIC_DRAW);
     vertexArray.attribute(0, 3, GL_FLOAT, GL_FALSE, 0, cast(void*)0);
-    glBindVertexArray(0);
+    vertexArray.unbind();
 
     SDL_Event event;
     bool running = true;
@@ -38,7 +38,7 @@ void main()
         programID.use();
         vertexArray.bind();
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        VertexArray.bindZero();
+        vertexArray.unbind();
         SDL_GL_SwapWindow(Screen.window);
         SDL_Delay(10);
     }

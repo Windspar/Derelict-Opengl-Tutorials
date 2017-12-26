@@ -96,7 +96,7 @@ void main()
     VertexBuffer colorBuffer = VertexBuffer(1).bind(GL_ARRAY_BUFFER);
     colorBuffer.data(GL_ARRAY_BUFFER, cubeColorData.glSizeof(), cubeColorData.ptr, GL_STATIC_DRAW);
     vertexArray.attribute(1, 3, GL_FLOAT, GL_FALSE, 0, cast(void*)0);
-    VertexArray.bindZero();
+    vertexArray.unbind();
 
     mat4 projection = mat4.perspective(800, 600, 45.0f, 0.1f, 100.0f);
     mat4 view = mat4.look_at(
@@ -126,7 +126,7 @@ void main()
         programID.uniformMatrix4fv("MVP", 1, GL_TRUE, mvp);
         vertexArray.bind();
         glDrawArrays(GL_TRIANGLES, 0, 36);
-        VertexArray.bindZero();
+        vertexArray.unbind();
         SDL_GL_SwapWindow(Screen.window);
         SDL_Delay(10);
     }
