@@ -1,8 +1,8 @@
 module common.sdl.basic;
 import common.gl.mygl;
-import std.string : toStringz;
 import std.stdio : writeln;
 import derelict.sdl2.sdl;
+import derelict.sdl2.image;
 
 struct Screen
 {
@@ -54,6 +54,9 @@ bool setupScreen(string title, in int width, in int height, SDL_WindowFlags flag
     if(SDL_GL_SetSwapInterval(1) < 0)
         writeln("Unable to vsync! ", SDL_GetError());
 
+    DerelictSDL2Image.load();
+    IMG_Init(7);
+
     return true;
 }
 
@@ -61,5 +64,6 @@ void cleanUp()
 {
     SDL_GL_DeleteContext(Screen.context);
     SDL_DestroyWindow(Screen.window);
+    IMG_Quit();
     SDL_Quit();
 }
