@@ -1,14 +1,6 @@
 .dub/
 dub.selections.json
-
 commonGL/libcommon.a
-Opengl org/Tut1 First Window/window
-Opengl org/Tut2 Red Triangle/triangle
-Opengl org/Tut4 Cube/cube
-
-Opengl com/T2 Hello Triangle/Triangle/triangle
-Opengl com/T2 Hello Triangle/Triangle Elements/triangle
-Opengl com/T3 Shaders/Tri Color/triangle
-Opengl com/T3 Shaders/Uniforms/triangle
+main
 
 My Play/MyCube/cube
