@@ -60,7 +60,9 @@ void main()
         SDL_GL_SwapWindow(Screen.window);
         SDL_Delay(10);
     }
+    ebo.destroy();
     vbo.destroy();
+    vao.destroy();
     shader.destroy();
     cleanUp();
 }

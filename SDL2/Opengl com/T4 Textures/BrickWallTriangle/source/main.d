@@ -50,6 +50,7 @@ void main()
         SDL_Delay(10);
     }
     vbo.destroy();
+    vao.destroy();
     shader.destroy();
     cleanUp();
 }
